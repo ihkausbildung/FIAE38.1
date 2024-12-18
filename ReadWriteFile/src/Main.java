@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -31,7 +32,16 @@ public class Main {
     public static void main(String[] args) {
         try {
           //  writeFile("test.txt");
-            readFile("test.txt");
+          //  readFile("test.txt");
+
+
+            String  line = "3,Max,5234";
+
+            String[] arr=   line.split(",");
+
+            System.out.println(arr[0]);
+            System.out.println(arr[1]);
+            System.out.println(arr[2]);
         } catch (Exception e) {
             e.printStackTrace();
         }
