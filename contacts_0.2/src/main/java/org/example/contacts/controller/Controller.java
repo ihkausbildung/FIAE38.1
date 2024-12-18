@@ -11,6 +11,7 @@ import org.example.contacts.dao.ContactDummyDAO;
 import org.example.contacts.model.Contact;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Controller {
 
@@ -30,23 +31,24 @@ public class Controller {
     void onDelete(ActionEvent event) {
         //TODO
         Contact removeContact = listView.getSelectionModel().getSelectedItem();
-        listView.getItems().remove(removeContact);
-
-
-
+        //listView.getItems().remove(removeContact);
+        boolean deleted = dao.delete(removeContact.getId());
+        if (deleted) {
+            listView.getItems().setAll(dao.findAll());// refresh
+        }
 
     }
 
     @FXML
     void onSave(ActionEvent event) {
 
-       // listView.getItems().add();
+        // listView.getItems().add();
         Contact newContact = new Contact(nameField.getText(), numberField.getText());
 
-       boolean saved = dao.save(newContact);
-       if(saved){
-           listView.getItems().setAll(dao.findAll());// refresh
-       }
+        boolean saved = dao.save(newContact);
+        if (saved) {
+            listView.getItems().setAll(dao.findAll());// refresh
+        }
 
     }
 
@@ -57,7 +59,10 @@ public class Controller {
         listView.getItems().setAll(dao.findAll());// refresh
     }
 
+    // TODO Text change -> ohne Button-Event
     public void onSearch(ActionEvent actionEvent) {
         System.out.println(actionEvent);
+        List<Contact> findList = dao.findByName(searchField.getText());
+        listView.getItems().setAll(findList);// refresh
     }
 }

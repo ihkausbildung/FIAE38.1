@@ -8,11 +8,12 @@ import java.util.List;
 public class ContactDummyDAO implements ContactDAO {
 
     static ArrayList<Contact> contacts = new ArrayList<>();
+    static int count;
 
 
     static {
-        contacts.add(new Contact(1, "Max", "23423"));
-        contacts.add(new Contact(2, "Ina", "5234234"));
+        contacts.add(new Contact(count++, "Max", "23423"));
+        contacts.add(new Contact(count++, "Ina", "5234234"));
     }
 
     /**
@@ -22,7 +23,7 @@ public class ContactDummyDAO implements ContactDAO {
     @Override
     public boolean save(Contact newContact) {
         //Aufgabe vor dem Speichern eine neue ID hinzufügen
-
+        newContact.setId(count++);
         return contacts.add(newContact);
 
     }

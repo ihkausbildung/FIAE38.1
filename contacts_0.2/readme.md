@@ -11,3 +11,5 @@
 
 
 # Todo
+* Benutzermeldung
+* Search mit Teilstring und TextField (lowercase)
