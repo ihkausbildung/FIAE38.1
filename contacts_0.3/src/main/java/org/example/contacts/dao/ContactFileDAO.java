@@ -2,9 +2,12 @@ package org.example.contacts.dao;
 
 import org.example.contacts.model.Contact;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-public class ContactFileDAO implements  ContactDAO{
+public class ContactFileDAO implements ContactDAO {
     /**
      * @param newContact
      * @return true if saved
@@ -12,6 +15,16 @@ public class ContactFileDAO implements  ContactDAO{
     @Override
     public boolean save(Contact newContact) {
         // wir schreiben immer eine neue Datei
+        try {
+            newContact.setId(System.currentTimeMillis());
+            FileWriter fileWriter = new FileWriter("contact.txt",true);
+            fileWriter.write(newContact.getId()+","+newContact.getName()+","+newContact.getNumber()); // 3,Max Meier,32423242
+            fileWriter.write(System.lineSeparator());
+            fileWriter.close();//TODO verbessern
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         return false;
     }
 
@@ -22,7 +35,9 @@ public class ContactFileDAO implements  ContactDAO{
     public List<Contact> findAll() {
         // Datei einlesen
         // neue Liste erzeugen
-        return null;
+        ArrayList<Contact> list = new ArrayList<>();
+
+        return list;
     }
 
     /**
@@ -39,7 +54,7 @@ public class ContactFileDAO implements  ContactDAO{
      * @return
      */
     @Override
-    public boolean delete(int id) {
+    public boolean delete(long id) {
         return false;
     }
 }

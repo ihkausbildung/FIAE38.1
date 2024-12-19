@@ -2,7 +2,7 @@ package org.example.contacts.model;
 
 public class Contact {
 
-    private int id;
+    private long id;
     private String name;
     private String number;
 
@@ -11,7 +11,7 @@ public class Contact {
         this.number = number;
     }
 
-    public Contact(int id, String name, String number) {
+    public Contact(long id, String name, String number) {
         this.id = id;
         this.name = name;
         this.number = number;
@@ -38,11 +38,11 @@ public class Contact {
         return name+": "+number;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 }

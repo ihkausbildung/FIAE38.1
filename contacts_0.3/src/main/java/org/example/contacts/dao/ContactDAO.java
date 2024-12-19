@@ -30,5 +30,5 @@ public interface ContactDAO {
      */
     List<Contact> findByName(String name);
 
-    boolean delete(int id);
+    boolean delete(long id);
 }

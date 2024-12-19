@@ -11,6 +11,8 @@ public class ContactDummyDAO implements ContactDAO {
     static int count;
 
 
+
+
     static {
         contacts.add(new Contact(count++, "Max", "23423"));
         contacts.add(new Contact(count++, "Ina", "5234234"));
@@ -57,7 +59,7 @@ public class ContactDummyDAO implements ContactDAO {
      * @return
      */
     @Override
-    public boolean delete(int id) {
+    public boolean delete(long id) {
         for (Contact c: contacts){
             if(c.getId()== id){
                return contacts.remove(c);
