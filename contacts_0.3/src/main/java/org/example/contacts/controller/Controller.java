@@ -48,6 +48,7 @@ public class Controller {
 
         boolean saved = dao.save(newContact);
         if (saved) {
+            System.out.println("saved");
             listView.getItems().setAll(dao.findAll());// refresh
         }
 
