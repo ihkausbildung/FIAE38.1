@@ -43,6 +43,7 @@ public class ContactFileDAO implements ContactDAO {
         // Datei einlesen
         // neue Liste erzeugen
         ArrayList<Contact> list = new ArrayList<>();
+
         try {
             Scanner sc = new Scanner(new File(FILE_NAME));
 
@@ -55,9 +56,10 @@ public class ContactFileDAO implements ContactDAO {
                 list.add(new Contact(id, name, number));
             }
             sc.close();
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
         return list;
     }
 
@@ -67,7 +69,16 @@ public class ContactFileDAO implements ContactDAO {
      */
     @Override
     public List<Contact> findByName(String name) {
-        return null;
+        List<Contact> contacts = findAll();
+        List<Contact> resultList = new ArrayList<>();
+
+        for (Contact c : contacts){
+            if (c.getName().toLowerCase().contains(name.toLowerCase())) {
+                resultList.add(c);
+            }
+        }
+
+        return resultList;
     }
 
     /**
@@ -77,7 +88,7 @@ public class ContactFileDAO implements ContactDAO {
     @Override
     public boolean delete(long id) {
         List<Contact> listOrg = findAll();//aus Datei lesen
-        boolean removed=  listOrg.removeIf(contact -> contact.getId() == id);
+        boolean removed=  listOrg.removeIf(c -> c.getId() == id );
         if(!removed){
             return false;
         }
@@ -93,6 +104,8 @@ public class ContactFileDAO implements ContactDAO {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+
 
         return true;
     }

@@ -24,7 +24,7 @@
               </ToolBar>
             <ToolBar prefHeight="40.0" prefWidth="200.0">
               <items>
-                  <TextField fx:id="searchField" />
+                  <TextField fx:id="searchField" onKeyTyped="#onKey" />
                 <Button mnemonicParsing="false" onAction="#onSearch" text="Search" />
               </items>
             </ToolBar>

@@ -4,8 +4,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import org.example.contacts.dao.ContactDAO;
 import org.example.contacts.dao.ContactDummyDAO;
 import org.example.contacts.dao.ContactFileDAO;
@@ -61,6 +63,9 @@ public class Controller {
         dao = new ContactFileDAO();
         listView.getItems().setAll(dao.findAll());// refresh
 
+
+
+
     }
 
     // TODO Text change -> ohne Button-Event
@@ -68,5 +73,10 @@ public class Controller {
         System.out.println(actionEvent);
         List<Contact> findList = dao.findByName(searchField.getText());
         listView.getItems().setAll(findList);// refresh
+    }
+
+    public void onKey(KeyEvent keyEvent) {
+       // System.out.println(keyEvent);
+        listView.getItems().setAll(dao.findByName(searchField.getText()));
     }
 }
