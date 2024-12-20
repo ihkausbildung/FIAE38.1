@@ -1,0 +1,3 @@
+<template>
+  <input-field default="org.example.contacts_new">IJ_BASE_PACKAGE</input-field>
+</template>
