@@ -5,6 +5,12 @@ import model.Fahrzeug;
 public class FahrzeugFactory {
 
 
+    //private Constructor
+
+    private FahrzeugFactory(){
+
+    }
+
     public static Fahrzeug create(String typ){
         if(typ.equals("auto")){
             return new Auto();
