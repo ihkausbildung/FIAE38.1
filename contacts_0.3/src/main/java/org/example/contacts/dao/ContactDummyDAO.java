@@ -2,6 +2,7 @@ package org.example.contacts.dao;
 
 import org.example.contacts.model.Contact;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 

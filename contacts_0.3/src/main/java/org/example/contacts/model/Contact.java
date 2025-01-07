@@ -1,6 +1,6 @@
 package org.example.contacts.model;
 
-public class Contact {
+public class Contact extends  Object{
 
     private long id;
     private String name;
