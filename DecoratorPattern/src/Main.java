@@ -36,14 +36,14 @@ public class Main {
         System.out.println(ud.render());
 
 
-
+*/
 
         // Java Beispiel
         BufferedWriter writer = new BufferedWriter(new FileWriter(new File("test.txt"))); //Erzeugen eines effizienten Writers für Textdateien
         writer.write("Hallo");
         writer.newLine();
         writer.close();
-*/
+
 
     }
 }
