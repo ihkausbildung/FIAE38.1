@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>app.Text</OriginalElement>
+  <nodes>
+    <node x="-112.40272747017539" y="344.20804680910675">app.BorderDecorator</node>
+    <node x="-65.94766638553392" y="-14.11983137878699">app.Text</node>
+    <node x="-81.29906850557401" y="165.67946840140135">app.TextDecorator</node>
+    <node x="151.8463667317061" y="269.5423530762971">app.UpperCaseDecorator</node>
+    <node x="152.7463120085613" y="89.22860630357317">app.PlainText</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="app.BorderDecorator" target="app.TextDecorator" relationship="GENERALIZATION">
+      <point x="95.49972747017539" y="-4.6809106720502314E-5" />
+      <point x="122.0" y="376.708" />
+      <point x="122.0" y="221.5" />
+      <point x="86.000068505574" y="23.32053159859865" />
+    </edge>
+    <edge source="app.UpperCaseDecorator" target="app.TextDecorator" relationship="GENERALIZATION">
+      <point x="-113.5003667317061" y="-3.530762971308832E-4" />
+      <point x="122.0" y="302.042" />
+      <point x="122.0" y="221.5" />
+      <point x="86.000068505574" y="23.32053159859865" />
+    </edge>
+    <edge source="app.TextDecorator" target="app.Text" relationship="REALIZATION">
+      <point x="86.000068505574" y="-4.684014013491833E-4" />
+      <point x="122.0" y="198.179" />
+      <point x="122.0" y="18.38" />
+      <point x="73.99966638553393" y="-1.6862121301031152E-4" />
+    </edge>
+    <edge source="app.PlainText" target="app.Text" relationship="REALIZATION">
+      <point x="-74.00031200856128" y="3.9369642682629546E-4" />
+      <point x="122.0" y="121.729" />
+      <point x="122.0" y="18.38" />
+      <point x="73.99966638553393" y="-1.6862121301031152E-4" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.5" showDependencies="false" x="143.0" y="207.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
