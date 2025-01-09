@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>QuickSort</OriginalElement>
+  <nodes>
+    <node x="-39.0" y="140.0">BubbleSort</node>
+    <node x="126.0" y="140.0">QuickSort</node>
+    <node x="-54.0" y="267.0">Main</node>
+    <node x="-71.14285714285717" y="13.0">SortStrategy</node>
+    <node x="-408.33333333333337" y="20.0">Sorter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Main" target="Sorter" relationship="CREATE">
+      <point x="0.0" y="-32.5" />
+      <point x="33.5" y="242.0" />
+      <point x="-280.33333333333337" y="242.0" />
+      <point x="0.0" y="44.5" />
+    </edge>
+    <edge source="Main" target="BubbleSort" relationship="CREATE">
+      <point x="0.0" y="-32.5" />
+      <point x="0.0" y="32.5" />
+    </edge>
+    <edge source="Main" target="QuickSort" relationship="CREATE">
+      <point x="0.0" y="-32.5" />
+      <point x="33.5" y="242.0" />
+      <point x="193.0" y="242.0" />
+      <point x="0.0" y="32.5" />
+    </edge>
+    <edge source="QuickSort" target="SortStrategy" relationship="REALIZATION">
+      <point x="0.0" y="-32.5" />
+      <point x="193.0" y="108.0" />
+      <point x="117.60714285714283" y="108.0" />
+      <point x="117.60714285714283" y="98.0" />
+      <point x="46.60714285714283" y="98.0" />
+      <point x="39.25" y="32.5" />
+    </edge>
+    <edge source="BubbleSort" target="SortStrategy" relationship="REALIZATION">
+      <point x="0.0" y="-32.5" />
+      <point x="33.5" y="108.0" />
+      <point x="117.60714285714283" y="108.0" />
+      <point x="117.60714285714283" y="98.0" />
+      <point x="46.60714285714283" y="98.0" />
+      <point x="39.25" y="32.5" />
+    </edge>
+    <edge source="Sorter" target="SortStrategy" relationship="TO_ONE">
+      <point x="0.0" y="-44.5" />
+      <point x="-280.33333333333337" y="108.0" />
+      <point x="-31.892857142857167" y="108.0" />
+      <point x="-39.25" y="32.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.2000000000000002" showDependencies="true" x="-85.08333333333326" y="222.58333333333337" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
