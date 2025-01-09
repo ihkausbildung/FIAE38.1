@@ -2,6 +2,8 @@ package org.example.contacts.model;
 
 public class Contact {
 
+
+
     private long id;
     private String name;
     private String number;
