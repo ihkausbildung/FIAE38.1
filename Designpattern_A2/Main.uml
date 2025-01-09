@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>app.Main</OriginalElement>
+  <nodes>
+    <node x="279.7227584212458" y="0.5014922537706497">app.Main</node>
+    <node x="102.03444695665212" y="125.89425045805652">app.OldPrinterImpl</node>
+    <node x="43.79701285429081" y="-14.151798309788077">app.OldPrinter</node>
+    <node x="-85.39650280720747" y="298.2828440282164">app.PrinterAdapter</node>
+    <node x="334.660451942211" y="231.4230132967092">app.ModernPrinter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="app.OldPrinterImpl" target="app.OldPrinter" relationship="REALIZATION">
+      <point x="-62.237434102361306" y="-32.5" />
+      <point x="0.0" y="32.5" />
+    </edge>
+    <edge source="app.PrinterAdapter" target="app.ModernPrinter" relationship="REALIZATION">
+      <point x="0.0" y="-32.5" />
+      <point x="79.60349719279253" y="263.9230132967092" />
+      <point x="-165.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.5" showDependencies="false" x="299.5" y="184.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
