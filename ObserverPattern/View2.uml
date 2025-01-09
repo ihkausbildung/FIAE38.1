@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>app.View2</OriginalElement>
+  <nodes>
+    <node x="221.0" y="373.5">app.WeatherStation</node>
+    <node x="50.5" y="129.5">app.Observer</node>
+    <node x="10.5" y="289.5">app.View1</node>
+    <node x="-89.5" y="409.5">app.View2</node>
+    <node x="221.0" y="-14.5">app.Subject</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="app.WeatherStation" target="app.Subject" relationship="REALIZATION">
+      <point x="67.0" y="-68.5" />
+      <point x="422.0" y="342.0" />
+      <point x="355.0" y="342.0" />
+      <point x="0.0" y="56.5" />
+    </edge>
+    <edge source="app.View2" target="app.Observer" relationship="REALIZATION">
+      <point x="0.0" y="-32.5" />
+      <point x="-5.0" y="262.0" />
+      <point x="95.0" y="262.0" />
+      <point x="95.0" y="222.0" />
+      <point x="92.75" y="222.0" />
+      <point x="-42.25" y="32.5" />
+    </edge>
+    <edge source="app.View1" target="app.Observer" relationship="REALIZATION">
+      <point x="0.0" y="-32.5" />
+      <point x="95.0" y="222.0" />
+      <point x="92.75" y="222.0" />
+      <point x="-42.25" y="32.5" />
+    </edge>
+    <edge source="app.WeatherStation" target="app.Observer" relationship="TO_MANY">
+      <point x="-67.0" y="-68.5" />
+      <point x="288.0" y="262.0" />
+      <point x="177.25" y="262.0" />
+      <point x="42.25" y="32.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.380952380952381" showDependencies="true" x="209.5" y="258.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
