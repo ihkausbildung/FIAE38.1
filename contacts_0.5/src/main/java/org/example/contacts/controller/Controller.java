@@ -1,5 +1,6 @@
 package org.example.contacts.controller;
 
+import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -59,10 +60,10 @@ public class Controller {
     @FXML
     public void initialize() {
         System.out.println("init");
+
        // dao = new ContactDummyDAO();// switch to other Objekt
         dao = new ContactFileDAO();
         listView.getItems().setAll(dao.findAll());// refresh
-
 
 
 
