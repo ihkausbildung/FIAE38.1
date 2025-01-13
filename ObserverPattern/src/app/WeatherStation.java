@@ -21,7 +21,7 @@ public class WeatherStation implements Subject{
     public void notifyObservers() {
 
         for(Observer o : observers){
-            o.update(temperature);
+            o.update(temperature);// Polymorphie
         }
 
     }
