@@ -11,9 +11,7 @@ public class ContactDummyDAO implements ContactDAO {
     static int count;
 
 
-
-
-    static {
+    static {  // Dummy List contacts
         contacts.add(new Contact(count++, "Max", "23423"));
         contacts.add(new Contact(count++, "Ina", "5234234"));
     }
@@ -46,7 +44,7 @@ public class ContactDummyDAO implements ContactDAO {
     public List<Contact> findByName(String name) {
         ArrayList<Contact> resultList = new ArrayList<>();
         for (Contact c : contacts) {
-            if(c.getName().equals(name)){// TODO startWith
+            if (c.getName().equals(name)) {// TODO startWith
                 resultList.add(c);
             }
 
@@ -60,9 +58,9 @@ public class ContactDummyDAO implements ContactDAO {
      */
     @Override
     public boolean delete(long id) {
-        for (Contact c: contacts){
-            if(c.getId()== id){
-               return contacts.remove(c);
+        for (Contact c : contacts) {
+            if (c.getId() == id) {
+                return contacts.remove(c);
             }
 
         }

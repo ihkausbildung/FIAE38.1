@@ -1,5 +1,10 @@
 package org.example.contacts.model;
 
+/**
+ * @author Micha Schirmer
+ * @see
+ * @version 0.1
+ */
 public class Contact {
 
     private long id;
