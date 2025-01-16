@@ -17,11 +17,11 @@ public class Main {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json  = gson.toJson(p);
 
-        System.out.println(json);
+        System.out.println(json);// {JSON}
    // form Json
 
         Gson gson2 = new Gson();
-        Person p2 =  gson.fromJson(json,Person.class);
+        Person p2 =  gson2.fromJson(json,Person.class);
         System.out.println(p2);
 
 
